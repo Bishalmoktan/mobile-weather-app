@@ -1,50 +1,60 @@
-# Welcome to your Expo app 👋
+# Weather App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A simple and elegant weather application built using React Native Expo. The app fetches real-time weather data using the OpenWeather API and provides a clean UI with dynamic weather conditions.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Current weather updates
+- Temperature, humidity, and wind speed details
+- Weather condition icons
+- State management with Zustand
+- Styled with NativeWind
 
-   ```bash
+## Tech Stack
+
+- React Native Expo
+- Zustand (State Management)
+- NativeWind (Tailwind CSS for React Native)
+- OpenWeather API (Weather Data)
+
+## Installation
+
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/bishalmoktan/mobile-weather-app.git
+   cd weather-app
+   ```
+
+2. Install dependencies:
+
+   ```sh
    npm install
    ```
 
-2. Start the app
+   or
 
-   ```bash
-    npx expo start
+   ```sh
+   yarn install
    ```
 
-In the output, you'll find options to open the app in a
+3. Create an `.env` file in the root directory and add your OpenWeather API key:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+   ```env
+   OPENWEATHER_API_KEY=your_api_key_here
+   ```
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+4. Start the development server:
+   ```sh
+   expo start
+   ```
 
-## Get a fresh project
+## Usage
 
-When you're ready, run:
+- Open the app on your device/emulator
+- Allow location access to fetch weather data
+- View real-time weather updates
 
-```bash
-npm run reset-project
-```
+## API Reference
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- OpenWeather API: [https://openweathermap.org/api](https://openweathermap.org/api)
