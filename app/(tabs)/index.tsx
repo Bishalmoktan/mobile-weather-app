@@ -43,7 +43,7 @@ interface WeatherData {
 // https://openweathermap.org/img/wn/03d.png
 
 export default function WeatherScreen() {
-  const { data, setLocation, loading, error, fetchWeatherData } =
+  const { data, setLocation, loading, error, fetchWeatherData, location } =
     useWeatherStore();
   useEffect(() => {
     fetchWeatherData();
@@ -60,6 +60,12 @@ export default function WeatherScreen() {
       });
     })();
   }, []);
+
+  useEffect(() => {
+    if (location) {
+      fetchWeatherData(undefined, location);
+    }
+  }, [location]);
 
   if (loading) {
     return (
